@@ -10,6 +10,7 @@ import MyAppointments from './Pages/MyAppointments'
 import Appointment from './Pages/Appointment'
 import Navbar from './Componats/Navbar'
 import Home from './Pages/Home'
+import Footer from './Componats/Footer'
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/doctors" element={<Doctors />} />
-             <Route path="/doctors/speciality" element={<Doctors />} />
+             <Route path="/doctors/:speciality" element={<Doctors />} />
              <Route path="/login" element={<Login />} />
              <Route path="/about" element={<About />} />
              <Route path="/contact" element={<Contact />} />
@@ -28,7 +29,9 @@ function App() {
              <Route path="/my-appointments" element={<MyAppointments />} />
              <Route path="/appointment/:docId" element={<Appointment />} />
            </Routes>
+           <Footer/>
     </div>
+
   )
 }
 
