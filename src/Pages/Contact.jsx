@@ -3,8 +3,12 @@ import React from 'react'
 function Contact() {
   return (
     <div>
-      <h1 className="text-3xl bg-blue-500 font-bold underline">Welcome to the Contact Page</h1>
-    </div>
+      
+      <div className='text-center text-2xl pt-10 text-gray-500'>
+        <p>CONTACT  <span className='text-gray-700 font-semibold'>US </span></p>
+      </div> 
+
+     </div>
   )
 }
 
