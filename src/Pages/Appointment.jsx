@@ -35,6 +35,8 @@ const Appointment = () => {
           let endTime = new Date(currentDate)
           endTime.setHours(21, 0, 0, 0)
 
+          
+
           //setting hours of slot
           if(i === 0){
             // Today - start from current time + 1 hour
