@@ -19,9 +19,13 @@ function Contact() {
           <p className='text-gray-500'>Tel: (415) 555‑0132 <br /> Learn more about our teams and job openings.</p>
           <p className='font-semibold text-lg text-gray-600 '>CAREERS AT PRESCRIPO </p>
           <p className='text-gray-500'>Learn more about our teams and job openings.</p>
+          <p>Add same chenges </p>
           <button className='border  border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Eplore Jobs </button>
         </div>
       </div>
+
+      
+
 
      </div>
   )
