@@ -1,0 +1,41 @@
+name: MegaLinter
+
+on:
+  push:
+    branches: [main-17, develop-17]
+  pull_request:
+    branches:
+      - main-17
+      - develop-17
+      - "release/**"
+      - "hotfix/**"
+
+env:
+  APPLY_FIXES: all
+  APPLY_FIXES_EVENT: pull_request
+  APPLY_FIXES_MODE: commit
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+  megalinter:
+    name: MegaLinter
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: MegaLinter Run
+        uses: oxsecurity/megalinter/flavors/cupcake@v8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
